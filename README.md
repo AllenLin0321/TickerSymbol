@@ -8,7 +8,8 @@
 用法都相同，只是URL需要做調整
 
  `https://ticker-symbol.vercel.app/keyword/KEYWORD_SEARCH`
- eg : `https://ticker-symbol.vercel.app/keyword/apple`
+ 
+eg : https://ticker-symbol.vercel.app/keyword/apple
 
 ---
 
