@@ -16,5 +16,9 @@
     "express": "^4.16.4",
     "node-fetch": "^2.3.0",
     "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-json-transform": "^0.4.7"
   }
 }
