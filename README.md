@@ -1,5 +1,17 @@
 # Ticker Search Api
 
+
+程式碼原作者的股票代號資料庫已經兩年沒有更新
+
+因此將專案fork到我自己的repo上、更新股票代號資料庫並推到自己的Vercel帳戶
+
+用法都相同，只是URL需要做調整
+
+ `https://ticker-symbol.vercel.app/keyword/KEYWORD_SEARCH`
+ eg : `https://ticker-symbol.vercel.app/keyword/apple`
+
+---
+
 ### A Ticker symbol search api end point to get the matched record symbols with their respective names 
 
 #### Repository
