@@ -1,16 +1,32 @@
-﻿const gulp = require("gulp");
-const jsonTransform = require("gulp-json-transform");
+﻿const gulp = require("gulp"),
+  request = require("request"),
+  source = require("vinyl-source-stream"),
+  streamify = require("gulp-streamify"),
+  jsonTransform = require("gulp-json-transform");
 
-gulp.task("format", function () {
-  return gulp
-    .src("./src/data.json")
+require("dotenv").config();
+
+function fetchData() {
+  return request({
+    url: `${process.env.STOCK_API_URL}/ref-data/symbols`,
+    qs: {
+      token: process.env.API_TOKEN,
+    },
+  })
+    .pipe(source("data.json"))
     .pipe(
-      jsonTransform(function (data, file) {
-        return data.map(stock => ({
-          symbol: stock.symbol,
-          name: stock.name,
-        }));
-      })
+      streamify(
+        jsonTransform(function (stocks) {
+          return stocks.map(function (stock) {
+            return {
+              symbol: stock.symbol,
+              name: stock.name,
+            };
+          });
+        })
+      )
     )
     .pipe(gulp.dest("./"));
-});
+}
+
+exports.fetchData = fetchData;

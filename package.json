@@ -4,9 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js",
-    "format": "gulp format"
+    "fetchData": "gulp fetchData"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +13,16 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
+    "gulp-json-transform": "^0.4.7",
+    "gulp-streamify": "^1.0.2",
     "node-fetch": "^2.3.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "request": "^2.88.2",
+    "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-json-transform": "^0.4.7"
+    "gulp": "^4.0.2"
   }
 }
