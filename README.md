@@ -1,5 +1,5 @@
 # Ticker Search Api
-
+###### tags: `Markdown`
 
 程式碼原作者的股票代號資料庫已經兩年沒有更新
 
