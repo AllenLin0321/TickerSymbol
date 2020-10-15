@@ -11,6 +11,8 @@
  
 eg : https://ticker-symbol.vercel.app/keyword/apple
 
+若要更新股票資料庫，直接下 `npm run fetchData`
+
 ---
 
 ### A Ticker symbol search api end point to get the matched record symbols with their respective names 
